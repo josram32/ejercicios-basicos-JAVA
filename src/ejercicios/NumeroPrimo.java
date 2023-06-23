@@ -16,7 +16,7 @@ public class NumeroPrimo {
 		u.imprimir("\nIngrese un numero");
 		int numero = sc.nextInt();
 
-		// Este bucle ejecutara el programa mientras no se ingrese 0 ó 1
+		// Este bucle ejecutara el programa mientras no se ingrese 0
 		while (numero >= 0) {
 
 			int contador = 0;

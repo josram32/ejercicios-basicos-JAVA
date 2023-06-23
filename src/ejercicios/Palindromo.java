@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 import utilizables.Utilizable;
 
+//Palíndromo: Escribe un programa que verifique si una cadena de texto es un palíndromo 
+//(se lee igual de izquierda a derecha y de derecha a izquierda).
 public class Palindromo {
 
 	public static void main(String[] args) {
