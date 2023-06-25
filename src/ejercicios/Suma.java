@@ -25,10 +25,9 @@ public class Suma {
 			
 			u.imprimir("El resultado de la suma de " + numero1 + " + " + numero2 + " es: " + resultado +"\n");
 			
-			u.imprimir("¿Desea continuar? Y/N");
-			estado=sc.next().toUpperCase();
 			u.imprimir("\n");
-			
+			estado=u.salir(u, sc, estado);
+			u.imprimir("\n");
 		}
 		u.imprimir("El programa ha finalizado");		
 		

@@ -29,9 +29,9 @@ public class Palindromo {
 				u.imprimir(palabra+" al reves sería " + palabraInvertida + " asi que si es un palíndromo."); 
 			else 
 				u.imprimir(palabra+" al reves sería " + palabraInvertida + " asi que no es un palíndromo."); 
-						
-			u.imprimir("\n¿Desea continuar? Y/N");
-			estado=sc.next().toUpperCase();
+			
+			u.imprimir("\n");
+			estado=u.salir(u, sc, estado);
 			u.imprimir("\n");
 
 		}

@@ -24,8 +24,8 @@ public class ContadorDeCaracteres {
 			}
 			
 			u.imprimir("\nEl texto '" + texto + "' tiene " + contador + " caracteres.");
-			u.imprimir("\n¿Desea continuar? Y/N");
-			estado=sc.next().toUpperCase();
+			u.imprimir("\n");
+			estado=u.salir(u, sc, estado);
 			u.imprimir("\n");
 		}
 		u.imprimir("El programa ha sido finalizado.");	

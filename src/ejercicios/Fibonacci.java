@@ -36,8 +36,8 @@ public class Fibonacci {
 				}				
 			}			
 			
-			u.imprimir("\n¿Desea continuar? Y/N");
-			estado=sc.next().toUpperCase();
+			u.imprimir("\n");
+			estado=u.salir(u, sc, estado);
 			u.imprimir("\n");
 			
 		}

@@ -11,14 +11,14 @@ public class NumeroPrimo {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Utilizable u = new Utilizable();
-
-		u.imprimir("Este programa determina si un número es primo o no.\n" + "el 0 finalizará el programa");
-		u.imprimir("\nIngrese un numero");
-		int numero = sc.nextInt();
+		String estado = "Y";
+		
+		u.imprimir("Este programa determina si un número es primo o no.\n");
 
 		// Este bucle ejecutara el programa mientras no se ingrese 0
-		while (numero >= 0) {
-
+		while (estado.equals("Y")) {
+			u.imprimir("\nIngrese un numero");
+			int numero = sc.nextInt();
 			int contador = 0;
 			for (int i = 1; i <= numero; i++) {
 				if (numero % i == 0) {
@@ -31,9 +31,10 @@ public class NumeroPrimo {
 			} else {
 				u.imprimir("El número " + numero + " es primo");
 			}
-
-			u.imprimir("\nIngrese un numero");
-			numero = sc.nextInt();
+			u.imprimir("\n");
+			estado=u.salir(u, sc, estado);
+			u.imprimir("\n");
+			
 		}
 		u.imprimir("El programa ha sido finalizado.");
 	}

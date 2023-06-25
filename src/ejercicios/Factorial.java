@@ -25,8 +25,8 @@ public class Factorial {
 				resultado *= i;
 			}
 			u.imprimir("El factorial de !" + numero + " es: " + resultado + "\n");
-			u.imprimir("¿Desea continuar? Y/N");
-			estado=sc.next().toUpperCase();
+			u.imprimir("\n");
+			estado=u.salir(u, sc, estado);
 			u.imprimir("\n");
 			
 		}
