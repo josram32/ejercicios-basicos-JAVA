@@ -7,10 +7,12 @@ import utilizables.Utilizable;
 //Números primos: Escribe un programa que determine si un número dado es primo o no.
 
 public class NumeroPrimo {
+	
+	static Scanner sc = new Scanner(System.in);
+	static Utilizable u = new Utilizable();
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		Utilizable u = new Utilizable();
+		
 		String estado = "Y";
 		
 		u.imprimir("Este programa determina si un número es primo o no.\n");
@@ -32,7 +34,7 @@ public class NumeroPrimo {
 				u.imprimir("El número " + numero + " es primo");
 			}
 			u.imprimir("\n");
-			estado=u.salir(u, sc, estado);
+			estado=u.salir(estado);
 			u.imprimir("\n");
 			
 		}

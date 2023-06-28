@@ -9,10 +9,10 @@ import utilizables.Utilizable;
 */
 public class Suma {
 
+	static Scanner sc = new Scanner(System.in);
+	static Utilizable u = new Utilizable();
+	
 	public static void main(String[] args) {
-		
-		Scanner sc = new Scanner(System.in);
-		Utilizable u = new Utilizable();
 		
 		String estado = "Y";
 		u.imprimir("Hola, este programa suma números enteros\n");
@@ -26,7 +26,7 @@ public class Suma {
 			u.imprimir("El resultado de la suma de " + numero1 + " + " + numero2 + " es: " + resultado +"\n");
 			
 			u.imprimir("\n");
-			estado=u.salir(u, sc, estado);
+			estado=u.salir(estado);
 			u.imprimir("\n");
 		}
 		u.imprimir("El programa ha finalizado");		

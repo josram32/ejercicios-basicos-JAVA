@@ -6,12 +6,13 @@ import java.util.Scanner;
 import utilizables.Utilizable;
 
 public class AdivinaElNumero {
-
+	
+	static Scanner sc = new Scanner(System.in);
+	static Utilizable u = new Utilizable();
+	static Random random = new Random();
+	
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		Utilizable u = new Utilizable();
-		Random random = new Random();
-		
+				
 		String estado = "Y";
 		
 		u.imprimir("Este es un juego de adivinación\n"
@@ -100,11 +101,11 @@ public class AdivinaElNumero {
 	
 	public static boolean validarNumero(int numero, int numerox, int intentos) {
 		if(numero != numerox) {
-			System.out.println("Fallaste!!! te quedan " + (2-intentos) + " intentos\n");
+			u.imprimir("Fallaste!!! te quedan " + (2-intentos) + " intentos\n");
 			return false;
 		}
 		else {
-			System.out.println("Adivinaste!!! Has vencido al sistema!!!");
+			u.imprimir("Adivinaste!!! Has vencido al sistema!!!");
 			return true;
 		}	
 		
@@ -114,22 +115,22 @@ public class AdivinaElNumero {
 
 		switch(intentos){
 		case 0:
-			System.out.println("Cual es el número X???");
-			System.out.println("Pista 1: El número X está entre 1 y 10");
+			u.imprimir("Cual es el número X???");
+			u.imprimir("Pista 1: El número X está entre 1 y 10");
 			break;
 		case 1: 
-			System.out.println("Cual es el número X???");
+			u.imprimir("Cual es el número X???");
 			if(numerox>=6)
-				System.out.println("Pista 2: El número X es mayor ó igual a 6");
+				u.imprimir("Pista 2: El número X es mayor ó igual a 6");
 			else
-				System.out.println("Pista 2: El número X es menor a 6");
+				u.imprimir("Pista 2: El número X es menor a 6");
 			break;
 		default: 
-			System.out.println("Cual es el número X???");
+			u.imprimir("Cual es el número X???");
 			if(numerox%2==0)
-				System.out.println("Pista 3: El número X es par");
+				u.imprimir("Pista 3: El número X es par");
 			else
-				System.out.println("Pista 3: El número X es impar");
+				u.imprimir("Pista 3: El número X es impar");
 			break;
 		}
 	}
@@ -138,7 +139,7 @@ public class AdivinaElNumero {
 		switch(intentos) {
 		case 0:						
 			if(ganador) {
-				System.out.println("Obtuviste "+ puntos +" puntos perfectos!!!!");
+				u.imprimir("Obtuviste "+ puntos +" puntos perfectos!!!!");
 			}
 			else {
 				puntos -= 40;
@@ -146,7 +147,7 @@ public class AdivinaElNumero {
 			break;
 		case 1:			
 			if(ganador) {
-				System.out.println("Obtuviste "+ puntos +" puntos.");
+				u.imprimir("Obtuviste "+ puntos +" puntos.");
 			}
 			else {
 				puntos -= 40;
@@ -155,7 +156,7 @@ public class AdivinaElNumero {
 			
 		case 2:
 			if(ganador) {
-				System.out.println("Obtuviste "+ puntos +" puntos.");
+				u.imprimir("Obtuviste "+ puntos +" puntos.");
 			}
 			else {
 				puntos = 0;
@@ -164,7 +165,7 @@ public class AdivinaElNumero {
 		default:
 			if(!ganador && puntos == 0) {
 				puntos = 0;
-				System.out.println("Perdiste!!!! Tienes " + puntos +" puntos. (TnT)");
+				u.imprimir("Perdiste!!!! Tienes " + puntos +" puntos. (TnT)");
 			}
 		}
 		

@@ -8,9 +8,10 @@ import utilizables.Utilizable;
 //Números Fibonacci: Escribe un programa que genere los primeros N números de la secuencia de Fibonacci.
 public class Fibonacci {
 	
+	static Scanner sc = new Scanner(System.in);
+	static Utilizable u = new Utilizable();
+	
 	public static void main(String[] arg) {
-		Scanner sc = new Scanner(System.in);
-		Utilizable u = new Utilizable();
 		
 		String estado = "Y";
 		
@@ -37,7 +38,7 @@ public class Fibonacci {
 			}			
 			
 			u.imprimir("\n");
-			estado=u.salir(u, sc, estado);
+			estado=u.salir(estado);
 			u.imprimir("\n");
 			
 		}

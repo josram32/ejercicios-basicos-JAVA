@@ -8,10 +8,10 @@ import utilizables.Utilizable;
 
 public class Factorial {
 
+	static Scanner sc = new Scanner(System.in);
+	static Utilizable u = new Utilizable();
+	
 	public static void main(String[] args) {
-		
-		Scanner sc = new Scanner(System.in);
-		Utilizable u = new Utilizable();
 		
 		String estado = "Y";
 		
@@ -26,7 +26,7 @@ public class Factorial {
 			}
 			u.imprimir("El factorial de !" + numero + " es: " + resultado + "\n");
 			u.imprimir("\n");
-			estado=u.salir(u, sc, estado);
+			estado=u.salir(estado);
 			u.imprimir("\n");
 			
 		}

@@ -6,10 +6,10 @@ import utilizables.Utilizable;
 
 public class ConversionTemperatura {
 	
+	static Scanner sc = new Scanner(System.in);
+	static Utilizable u = new Utilizable();
+	
 	public static void main (String[] args) {
-		
-		Scanner sc = new Scanner(System.in);
-		Utilizable u = new Utilizable();
 		
 		String estado = "Y";
 		u.imprimir("Hola, este programa convierte grados Celsius(°C) a Fahrenheit(°F)\n");
@@ -20,7 +20,7 @@ public class ConversionTemperatura {
 			u.imprimir(gradosCelsius + "°C son equivalentes a " + gradosFahrenheit +"°F");
 						
 			u.imprimir("\n");
-			estado=u.salir(u, sc, estado);
+			estado=u.salir(estado);
 			u.imprimir("\n");
 		}
 		u.imprimir("El programa ha finalizado");

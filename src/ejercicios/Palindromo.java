@@ -8,9 +8,10 @@ import utilizables.Utilizable;
 //(se lee igual de izquierda a derecha y de derecha a izquierda).
 public class Palindromo {
 
+	static Scanner sc = new Scanner(System.in);
+	static Utilizable u = new Utilizable();
+	
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		Utilizable u = new Utilizable();
 		
 		String estado = "Y";
 		
@@ -31,7 +32,7 @@ public class Palindromo {
 				u.imprimir(palabra+" al reves sería " + palabraInvertida + " asi que no es un palíndromo."); 
 			
 			u.imprimir("\n");
-			estado=u.salir(u, sc, estado);
+			estado=u.salir(estado);
 			u.imprimir("\n");
 
 		}
